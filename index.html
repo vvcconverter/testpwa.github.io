@@ -194,7 +194,20 @@
       <span tabindex="-1" class="infobar-icon"></span>
       <span tabindex="-1" class="infobar-content">
         <input type="checkbox" required="" class="infobar-close-icon" title="Close">
-        <span id="datetime">Wed Nov 05 2025 16:22:08 GMT+0300 (Москва, стандартное время)</span>
+        <span>
+  <amp-list
+    width="auto"
+    height="20"
+    layout="fixed-height"
+    src="https://worldtimeapi.org/api/timezone/Europe/Moscow"
+    [src]="'https://worldtimeapi.org/api/timezone/Europe/Moscow?_=' + now()"
+    credentials="omit"
+  >
+    <template type="amp-mustache">
+      {{datetime}}
+    </template>
+  </amp-list>
+</span>
         <a class="infobar-link-icon" target="_blank" rel="noopener noreferrer" title="Open source URL: https://zavod.vodka/stream " href="https://zavod.vodka/stream "></a>
       </span>
     </form>
